@@ -1,45 +1,53 @@
-/* 1. Target the body tag for inheritance */
+/* Inheritance - Body tag */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
-    font-size: 18px; /* Increase font size to 18px */
+    font-family: Arial, sans-serif; /* You can choose your preferred font */
+    font-size: 18px;
 }
 
-/* 2. Select both header and footer for background color */
+/* Select multiple elements */
 header, footer {
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f0f0f0; /* Light grey background */
 }
 
-/* 3. Class selector for the site title */
+/* Class selector */
 .site-title {
-    color: #2c3e50; /* Change heading color */
+    color: #2c3e50; /* Changes text color of the h1 */
 }
 
-/* 4. ID selector for the image box-shadow */
+/* ID selector - Box shadow */
 #my-image {
-    /* 0 horizontal, 0 vertical, 2px blur, 1px spread, black color */
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 0 0 2px 1px black; 
+    /* horizontal, vertical, blur, spread, color */
 }
 
-/* 5. Change hobby list bullets to squares */
+/* Hobby list - Replace bullets with squares */
 ul {
     list-style-type: square;
 }
 
-/* 6. Background for odd list items using nth-child */
-ul li:nth-child(odd) {
-    background-color: #e8e8e8;
+/* nth-child selector - Background for odd list items */
+li:nth-child(odd) {
+    background-color: #e8f4fd;
 }
 
-/* 7. Styling the Navigation links */
+/* --- Styling the Navigation --- */
+
+/* Remove bullets and underline for nav links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 nav a {
-    text-decoration: none; /* Remove underline */
-    background-color: #ffffff; /* Add background */
-    border: 1px solid #ccc; /* Add border */
+    text-decoration: none;
+    background-color: #ddd;
+    border: 1px solid #bbb;
     padding: 5px 10px;
     display: inline-block;
 }
 
-/* Change background on hover/focus */
+/* Hover/Focus state */
 nav a:hover, nav a:focus {
-    background-color: #ffeb3b; /* Highlight color */
+    background-color: #333;
+    color: white;
 }
