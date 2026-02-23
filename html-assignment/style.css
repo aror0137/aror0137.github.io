@@ -1,0 +1,45 @@
+/* 1. Target the body tag for inheritance */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+    font-size: 18px; /* Increase font size to 18px */
+}
+
+/* 2. Select both header and footer for background color */
+header, footer {
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* 3. Class selector for the site title */
+.site-title {
+    color: #2c3e50; /* Change heading color */
+}
+
+/* 4. ID selector for the image box-shadow */
+#my-image {
+    /* 0 horizontal, 0 vertical, 2px blur, 1px spread, black color */
+    box-shadow: 0px 0px 2px 1px black;
+}
+
+/* 5. Change hobby list bullets to squares */
+ul {
+    list-style-type: square;
+}
+
+/* 6. Background for odd list items using nth-child */
+ul li:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+/* 7. Styling the Navigation links */
+nav a {
+    text-decoration: none; /* Remove underline */
+    background-color: #ffffff; /* Add background */
+    border: 1px solid #ccc; /* Add border */
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+/* Change background on hover/focus */
+nav a:hover, nav a:focus {
+    background-color: #ffeb3b; /* Highlight color */
+}
