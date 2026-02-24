@@ -6,13 +6,13 @@ body {
 
 /* Requirement: Select multiple elements (header and footer) with same background */
 header, footer {
-    background-color: rgb(134, 237, 206);
+    background-color: rgb(37, 199, 150);
     padding: 10px;
 }
 
 /* Requirement: Class selector for text colour */
 .site-title {
-    color: #2c3e50;
+    color: #5180af;
 }
 
 /* Requirement: ID selector with specific box-shadow */
@@ -28,7 +28,7 @@ header, footer {
 
 /* Requirement: nth-child selector for odd items background */
 .hobby-list li:nth-child(odd) {
-    background-color: #dcdcdc;
+    background-color: #e63434;
 }
 
 /* Requirement: Styling the Navigation */
@@ -43,7 +43,7 @@ nav li {
 
 nav a {
     text-decoration: none; /* Remove underline */
-    background-color: #eee;
+    background-color: gray
     border: 1px solid #333;
     padding: 10px 20px;
     display: block;
