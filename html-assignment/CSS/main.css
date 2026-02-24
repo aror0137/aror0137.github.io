@@ -3,11 +3,11 @@ body {
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 18px;
 }
-
-/* Requirement: Select multiple elements (header and footer) with same background */
+/* Fixed Header/Footer Background */
 header, footer {
-    background-color: rgb(37, 199, 150);
-    padding: 10px;
+    background-color: #8b7333; /* Dark Gold/Brown */
+    padding: 20px;
+    color: white;
 }
 
 /* Requirement: Class selector for text colour */
@@ -30,12 +30,17 @@ header, footer {
 .hobby-list li:nth-child(odd) {
     background-color: #e63434;
 }
-
-/* Requirement: Styling the Navigation */
-nav ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
+/* Fixed Navigation Buttons */
+nav a {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2); /* Subtle dark overlay */
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    display: inline-block; /* Essential for padding to work */
+    color: white;
 }
+
+
 nav li {
     display: inline-block;
     margin-right: 15px; /* This separates the buttons */
