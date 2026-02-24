@@ -40,8 +40,8 @@ nav ul {
 nav li {
     display: inline; 
     margin-right: 15px;
-    
-     /* This seprate the buttons */
+    }
+     /* This separate the buttons */
 
 nav a {
     text-decoration: none;
@@ -50,6 +50,7 @@ nav a {
     padding: 5px 10px;
     display: inline-block;
 }
+/* kept the most specific display property */
 
 /* Hover/Focus state */
 nav a:hover, nav a:focus {
