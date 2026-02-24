@@ -1,59 +1,41 @@
-/* Inheritance - Body tag */
+/* Requirement: Inheritance - target the body tag for font family and 18px size */
 body {
-    font-family: Arial, sans-serif; /* You can choose your preferred font */
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    line-height: 1.4;
 }
 
-/* Select multiple elements */
+/* Requirement: Select multiple elements (header and footer) */
 header, footer {
-    background-color: #d85c5c; /* Light grey background */
+    background-color: #85662d;
+    padding: 20px;
 }
 
-/* Class selector */
+/* Requirement: Class selector for text colour */
 .site-title {
-    color: #2c3e50; /* Changes text color of the h1 */
+    color: #2c3e50;
 }
 
-/* ID selector - Box shadow */
+/* Requirement: ID selector with specific box-shadow placement */
+/* 0 horizontal, 0 vertical, 2px blur, 1px spread, black colour */
 #my-image {
-    box-shadow: 0 0 2px 1px black; 
-    /* horizontal, vertical, blur, spread, color */
+    box-shadow: 0px 0px 2px 1px black;
 }
 
-/* Hobby list - Replace bullets with squares */
-ul {
-    list-style-type: square;
+/* Requirement: nth-child selector for odd list items */
+.hobby-list li:nth-child(odd) {
+    background-color: #eeeeee;
 }
 
-/* nth-child selector - Background for odd list items */
-li:nth-child(odd) {
-    background-color: #e8f4fd;
-}
-
-/* --- Styling the Navigation --- */
-
-/* Remove bullets and underline for nav links */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav li {
-    display: inline; 
-    margin-right: 15px;
-    }
-     /* This separate the buttons */
-
+/* Navigation Styling (Requirement: remove underlines/add background) */
 nav a {
     text-decoration: none;
-    background-color: #ddd;
-    border: 1px solid #bbb;
+    background-color: #85662d;
+    border: 1px solid #cccccc;
     padding: 5px 10px;
-    display: inline-block;
+    margin-right: 5px;
 }
-/* kept the most specific display property */
 
-/* Hover/Focus state */
 nav a:hover, nav a:focus {
-    background-color: #333;
-    color: white;
+    background-color: #dddddd;
 }
