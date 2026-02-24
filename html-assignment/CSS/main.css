@@ -1,14 +1,13 @@
-/* Requirement: Inheritance - target the body tag for font family and 18px size */
+/* Requirement: Target body for inheritance (font-family and 18px size) */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     font-size: 18px;
-    line-height: 1.4;
 }
 
-/* Requirement: Select multiple elements (header and footer) */
+/* Requirement: Select multiple elements (header and footer) with same background */
 header, footer {
-    background-color: #85662d;
-    padding: 20px;
+    background-color: rgb(134, 237, 206);
+    padding: 10px;
 }
 
 /* Requirement: Class selector for text colour */
@@ -16,26 +15,41 @@ header, footer {
     color: #2c3e50;
 }
 
-/* Requirement: ID selector with specific box-shadow placement */
+/* Requirement: ID selector with specific box-shadow */
 /* 0 horizontal, 0 vertical, 2px blur, 1px spread, black colour */
 #my-image {
     box-shadow: 0px 0px 2px 1px black;
 }
 
-/* Requirement: nth-child selector for odd list items */
+/* Requirement: Replace bullets with squares */
+.hobby-list {
+    list-style-type: square;
+}
+
+/* Requirement: nth-child selector for odd items background */
 .hobby-list li:nth-child(odd) {
-    background-color: #eeeeee;
+    background-color: #dcdcdc;
 }
 
-/* Navigation Styling (Requirement: remove underlines/add background) */
+/* Requirement: Styling the Navigation */
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    margin-right: 15px; /* This separates the buttons */
+}       
+
 nav a {
-    text-decoration: none;
-    background-color: #85662d;
-    border: 1px solid #cccccc;
-    padding: 5px 10px;
-    margin-right: 5px;
+    text-decoration: none; /* Remove underline */
+    background-color: #eee;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    display: block;
 }
 
+/* Requirement: Hover/Focus state background change */
 nav a:hover, nav a:focus {
-    background-color: #dddddd;
+    background-color: #79b217;
 }
