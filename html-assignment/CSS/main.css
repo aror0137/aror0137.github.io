@@ -18,7 +18,7 @@ header, footer {
 /* Requirement: ID selector with specific box-shadow */
 /* 0 horizontal, 0 vertical, 2px blur, 1px spread, black colour */
 #my-image {
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 0 0 2px 1px black;
 }
 
 /* Requirement: Replace bullets with squares */
