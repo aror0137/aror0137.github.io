@@ -1,156 +1,227 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Star Media | Assignment 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Star Media | Assignment 1</title>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Three Star Media Logo">
-        </div>
+```
+<!-- ==============================
+HEADER: Logo, Navigation, Search
+================================= -->
+<header>
+<div class="logo">
+<img src="images/logo.png" alt="Three Star Media Logo">
+</div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-        <form class="search-bar">
-            <input type="text" placeholder="Search">
-            <button type="submit">🔍</button>
-        </form>
-    </header>
+<form class="search-bar">
+<input type="text" placeholder="Search">
+<button type="submit">🔍</button>
+</form>
+</header>
 
-    <main>
-        <section class="hero">
-            <img src="images/main-banner.jpg" alt="Three Star Media Office Banner">
-            <h1>Welcome to Three Star Media</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum voluptas nesciunt quam nostrum similique nihil laboriosam provident neque, recusandae voluptate temporibus!</p>
-            <button type="button" onclick="location.href='#contact'">Connect with us ></button>
-        </section>
+<!-- ==============================
+MAIN CONTENT
+================================= -->
+<main>
 
-        <hr>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+<img src="images/main-banner.jpg" alt="Three Star Media Office Banner">
+<h1>Welcome to Three Star Media</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum voluptas nesciunt quam nostrum similique nihil laboriosam provident neque, recusandae voluptate temporibus! Animi accusamus id fuga voluptatibus facilis iusto consequuntur.</p>
+<a href="#contact"><button type="button">Connect with us &#9658;</button></a>
+</section>
 
-        <section id="about">
-            <img src="images/about-us.jpg" alt="Our Creative Space">
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero unde repellendus exercitationem asperiores ducimus placeat, maxime soluta nesciunt pariatur aliquam consequuntur sequi saepe sint praesentium laboriosam perferendis eius amet ad?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, velit ipsam? Atque accusamus, excepturi corrupti sunt reiciendis soluta quo commodi quidem.</p>
-        </section>
+<hr>
 
-        <hr>
+<!-- ABOUT US SECTION -->
+<section id="about">
+<img src="images/about-us.jpg" alt="Our Creative Space">
+<h2>About Us</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero unde repellendus exercitationem asperiores ducimus placeat, maxime soluta nesciunt pariatur aliquam consequuntur sequi saepe sint praesentium laboriosam perferendis eius amet ad?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, velit ipsam? Atque accusamus, excepturi corrupti sunt reiciendis soluta quo commodi quidem, non perferendis vel sed facilis rerum cum in exercitationem?</p>
+</section>
 
-        <section id="services">
-            <h2>Our Services</h2>
+<hr>
 
-            <article>
-                <img src="images/digital.jpg" alt="Digital Transformation Services">
-                <h3>Digital Transformation</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-                <button type="button" onclick="location.href='#'">Digital Plans ></button>
-            </article>
+<!-- SERVICES SECTION -->
+<section id="services">
+<h2>Our Services</h2>
 
-            <article>
-                <img src="images/marketing.jpg" alt="Marketing Strategy Services">
-                <h3>Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-                <button type="button" onclick="location.href='#'">Marketing Plans ></button>
-            </article>
+<!-- Service Card: Digital Transformation -->
+<article class="service-card">
+<img src="images/digital.jpg" alt="Digital Transformation Services">
+<h3>Digital Transformation</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+<a href="#contact"><button type="button">Digital Plans &#9658;</button></a>
+</article>
 
-            <article>
-                <img src="images/video.jpg" alt="Professional Video Production">
-                <h3>Video Production</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-                <button type="button" onclick="location.href='#'">Video Plans ></button>
-            </article>
+<!-- Service Card: Marketing -->
+<article class="service-card">
+<img src="images/marketing.jpg" alt="Marketing Strategy Services">
+<h3>Marketing</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+<a href="#contact"><button type="button">Marketing Plans &#9658;</button></a>
+</article>
 
-            <article>
-                <img src="images/web.jpg" alt="Custom Web Development">
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-                <button type="button" onclick="location.href='#'">Web Plans ></button>
-            </article>
+<!-- Service Card: Video Production -->
+<article class="service-card">
+<img src="images/video.jpg" alt="Professional Video Production">
+<h3>Video Production</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+<a href="#contact"><button type="button">Video Plans &#9658;</button></a>
+</article>
 
-            <article>
-                <img src="images/print.jpg" alt="Print Media Services">
-                <h3>Print</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-                <button type="button" onclick="location.href='#'">Print Plans ></button>
-            </article>
-        </section>
+<!-- Service Card: Web Development -->
+<article class="service-card">
+<img src="images/web.jpg" alt="Custom Web Development">
+<h3>Web Development</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+<a href="#contact"><button type="button">Web Plans &#9658;</button></a>
+</article>
 
-        <hr>
+<!-- Service Card: Print -->
+<article class="service-card">
+<img src="images/print.jpg" alt="Print Media Services">
+<h3>Print</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+<a href="#contact"><button type="button">Print Plans &#9658;</button></a>
+</article>
+</section>
 
-        <section id="vision">
-            <h2>Our Vision</h2>
-            <img src="images/vision.jpg" alt="Our future vision">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-            <button type="button" onclick="location.href='#about'">Learn More ></button>
-        </section>
+<hr>
 
-        <hr>
+<!-- OUR VISION SECTION -->
+<section id="vision">
+<h2>Our Vision</h2>
+<img src="images/vision.jpg" alt="Our future vision">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex voluptatem deleniti iure, accusantium rerum est commodi veniam tempora explicabo officiis fugiat eaque. Veritatis exercitationem delectus ea ab laudantium.</p>
+<a href="#about"><button type="button">Learn More &#9658;</button></a>
+</section>
 
-        <section id="team">
-            <h2>Our Team</h2>
-            
-            <article>
-                <img src="images/john.jpg" alt="John Doe">
-                <h3>John Doe</h3>
-                <p><strong>CEO and Co-owner</strong></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-            </article>
+<hr>
 
-            <article>
-                <img src="images/bob.jpg" alt="Bob">
-                <h3>Bob</h3>
-                <p><strong>CFO and Co-owner</strong></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consetetur.</p>
-            </article>
-        </section>
+<!-- OUR TEAM SECTION -->
+<section id="team">
+<h2>Our Team</h2>
 
-        <hr>
+<!-- Team Member: John Doe -->
+<article class="team-card">
+<img src="images/john.jpg" alt="John Doe">
+<h3>John Doe</h3>
+<p><strong>CEO and Co-owner</strong></p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+</article>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            
-            <div class="contact-layout">
-                <form>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message ></button>
-                </form>
+<!-- Team Member: Bob Rite -->
+<article class="team-card">
+<img src="images/bob.jpg" alt="Bob Rite">
+<h3>Bob Rite</h3>
+<p><strong>CFO and Co-owner</strong></p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
+</article>
+</section>
 
-                <div class="info-block">
-                    <div class="hours">
-                        <h3>Hours of Operation</h3>
-                        <p><strong>Monday - Friday:</strong> 09:00AM - 06:00PM</p>
-                        <p><strong>Saturday & Sunday:</strong> Closed</p>
-                    </div>
+<hr>
 
-                    <div class="location">
-                        <h3>Location</h3>
-                        <p>
-                            1385 Woodroffe Ave<br>
-                            Ottawa, Ontario<br>
-                            K2G 1V8
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- CONTACT SECTION -->
+<section id="contact">
+<h2>Contact Us</h2>
 
-    <footer>
-        <p>&copy; 2026 Three Star Media - All Rights Reserved</p>
-    </footer>
+<div class="contact-layout">
+
+<!-- Contact Form -->
+<div class="form-block">
+<h3>Send us a message</h3>
+<form>
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" placeholder="Full Name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="Email Address" required>
+
+<label for="message">Message</label>
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send &#9658;</button>
+</form>
+</div>
+
+<!-- Hours and Location Info -->
+<div class="info-block">
+
+<!-- Location with Google Maps Embed -->
+<div class="location">
+<h3>Location</h3>
+<p>
+1385 Woodroffe Ave<br>
+Ottawa, Ontario<br>
+K2G 1V8
+</p>
+<!-- Google Maps iframe showing Algonquin College -->
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.229506937896!2d-75.76261682346638!3d45.34942097107081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0ff6b66a5a43%3A0x9d3ba6b9c5e7a1e0!2sAlgonquin%20College!5e0!3m2!1sen!2sca!4v1713200000000!5m2!1sen!2sca"
+width="400"
+height="300"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+title="Algonquin College Location Map">
+</iframe>
+</div>
+
+<!-- Hours of Operation as HTML Table -->
+<div class="hours">
+<h3>Hours of operation</h3>
+<table>
+<thead>
+<tr>
+<th>Days</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monday - Friday</td>
+<td>9 AM - 6 PM</td>
+</tr>
+<tr>
+<td>Saturday - Sunday</td>
+<td>Closed</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- ==============================
+FOOTER
+================================= -->
+<footer>
+<p>&copy; Copyright Three Star Media, 2026</p>
+<p>All images are taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+</footer>
+```
 
 </body>
 </html>
