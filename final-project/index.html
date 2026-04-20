@@ -4,14 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Three Star Media | Assignment 1</title>
+
+<!-- Google Font: Open Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
-
-<!-- =============================
+<!-- ==============================
 HEADER: Logo, Navigation, Search
 ================================= -->
 <header>
+<div class="header-inner">
 <div class="logo">
 <img src="images/logo.png" alt="Three Star Media company logo">
 </div>
@@ -30,8 +39,8 @@ HEADER: Logo, Navigation, Search
 <input type="text" placeholder="Search">
 <button type="submit">🔍</button>
 </form>
+</div>
 </header>
-
 
 <!-- ==============================
 MAIN CONTENT
@@ -61,6 +70,9 @@ MAIN CONTENT
 <!-- SERVICES SECTION -->
 <section id="services">
 <h2>Our Services</h2>
+
+<!-- Services grid wrapper (used for desktop layout) -->
+<div class="services-grid">
 
 <!-- Service Card: Digital Transformation -->
 <article class="service-card">
@@ -101,14 +113,16 @@ MAIN CONTENT
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
 <button type="button" onclick="location.href='#contact'">Print Plans &#9658;</button>
 </article>
+
+</div>
 </section>
 
 <hr>
 
 <!-- OUR VISION SECTION -->
 <section id="vision">
-<h2>Our Vision</h2>
 <img src="images/vision.jpg" alt="Future vision concept illustration">
+<h2>Our Vision</h2>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex voluptatem deleniti iure, accusantium rerum est commodi veniam tempora explicabo officiis fugiat eaque. Veritatis exercitationem delectus ea ab laudantium.</p>
 <button type="button" onclick="location.href='#about'">Learn More &#9658;</button>
 </section>
@@ -118,6 +132,9 @@ MAIN CONTENT
 <!-- OUR TEAM SECTION -->
 <section id="team">
 <h2>Our Team</h2>
+
+<!-- Team grid wrapper (used for desktop layout) -->
+<div class="team-grid">
 
 <!-- Team Member: John Doe -->
 <article class="team-card">
@@ -134,6 +151,8 @@ MAIN CONTENT
 <p><strong>CFO and Co-owner</strong></p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur.</p>
 </article>
+
+</div>
 </section>
 
 <hr>
@@ -164,7 +183,7 @@ MAIN CONTENT
 <!-- Hours and Location Info -->
 <div class="info-block">
 
-<!-- Location -->
+<!-- Location with Google Maps Embed -->
 <div class="location">
 <h3>Location</h3>
 <p>
@@ -172,7 +191,7 @@ MAIN CONTENT
 Ottawa, Ontario<br>
 K2G 1V8
 </p>
-
+<!-- Google Maps iframe showing Algonquin College -->
 <iframe
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.229506937896!2d-75.76261682346638!3d45.34942097107081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0ff6b66a5a43%3A0x9d3ba6b9c5e7a1e0!2sAlgonquin%20College!5e0!3m2!1sen!2sca!4v1713200000000!5m2!1sen!2sca"
 width="400"
@@ -186,7 +205,7 @@ aria-label="Map showing Algonquin College location">
 </iframe>
 </div>
 
-<!-- Hours -->
+<!-- Hours of Operation Table -->
 <div class="hours">
 <h3>Hours of operation</h3>
 <table>
@@ -215,7 +234,6 @@ aria-label="Map showing Algonquin College location">
 
 </main>
 
-
 <!-- ==============================
 FOOTER
 ================================= -->
@@ -223,5 +241,7 @@ FOOTER
 <p>&copy; Copyright Three Star Media, 2026</p>
 <p>All images are taken from <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
 </footer>
+
+
 </body>
 </html>
