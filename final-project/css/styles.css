@@ -742,10 +742,12 @@ footer a:hover {
         display: flex;
         gap: 40px;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     .form-block {
         flex: 1;
+        min-width: 280px;
     }
 
     .info-block {
@@ -753,11 +755,13 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        min-width: 280px;
     }
 
     .location iframe {
         width: 100%;
         height: 260px;
+        border: 0;
     }
 
     /* FOOTER */
