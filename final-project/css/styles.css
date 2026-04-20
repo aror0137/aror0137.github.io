@@ -26,9 +26,7 @@ body {
 }
 
 /* Max width container */
-main,
-header,
-footer {
+main {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -132,6 +130,7 @@ header .search-bar button {
 
 /* ==============================
    HERO SECTION
+   FIX: Added dark overlay so text is readable
    ================================= */
 .hero {
     position: relative;
@@ -145,10 +144,23 @@ header .search-bar button {
     display: block;
 }
 
+/* Dark overlay on top of the hero image */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .hero h1,
 .hero p,
 .hero button {
     position: absolute;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -242,6 +254,8 @@ header .search-bar button {
 }
 
 .service-card button {
+    display: block;
+    width: calc(100% - 32px);
     margin: 0 16px 20px;
     background-color: var(--dark);
     color: var(--white);
@@ -250,6 +264,7 @@ header .search-bar button {
     font-family: var(--font-main);
     font-size: 0.9rem;
     cursor: pointer;
+    text-align: center;
 }
 
 .service-card button:hover {
@@ -272,10 +287,23 @@ header .search-bar button {
     display: block;
 }
 
+/* Dark overlay on vision image */
+#vision::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
 #vision h2,
 #vision p,
 #vision button {
     position: absolute;
+    z-index: 2;
 }
 
 #vision h2 {
@@ -319,6 +347,7 @@ header .search-bar button {
     margin-bottom: 20px;
 }
 
+/* Mobile: stacked cards */
 .team-card {
     background-color: var(--gold-light);
     margin-bottom: 24px;
@@ -401,6 +430,7 @@ header .search-bar button {
 
 .form-block button:hover {
     background-color: var(--dark);
+    color: var(--white);
 }
 
 /* Hours table */
@@ -478,7 +508,7 @@ footer a:hover {
    ================================= */
 @media (min-width: 760px) {
 
-    /* HEADER - horizontal layout */
+    /* HEADER - horizontal flexbox layout */
     .header-inner {
         display: flex;
         align-items: stretch;
@@ -546,22 +576,21 @@ footer a:hover {
     }
 
     .hero p {
-        top: 220px;
+        top: 240px;
         left: 40px;
         right: 45%;
         font-size: 0.9rem;
     }
 
     .hero button {
-        top: 340px;
+        top: 360px;
         left: 40px;
     }
 
-    /* ABOUT - 2 column grid */
+    /* ABOUT - 2 column CSS Grid */
     #about {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
         gap: 0 30px;
         padding: 40px;
         align-items: start;
@@ -590,25 +619,33 @@ footer a:hover {
         grid-row: 3;
     }
 
-    /* SERVICES - 2 column grid */
+    /* SERVICES - row 1: 2 cols, row 2: 3 cols using CSS Grid */
     #services {
         padding: 40px;
     }
 
-    #services h2 {
-        grid-column: 1 / -1;
-        margin-bottom: 24px;
-    }
-
     .services-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         gap: 20px;
+    }
+
+    /* First 2 cards take 3 columns each = 2 per row */
+    .service-card:nth-child(1),
+    .service-card:nth-child(2) {
+        grid-column: span 3;
+    }
+
+    /* Last 3 cards take 2 columns each = 3 per row */
+    .service-card:nth-child(3),
+    .service-card:nth-child(4),
+    .service-card:nth-child(5) {
+        grid-column: span 2;
     }
 
     /* VISION - taller */
     #vision img {
-        height: 260px;
+        height: 280px;
     }
 
     #vision h2 {
@@ -624,11 +661,11 @@ footer a:hover {
     }
 
     #vision button {
-        top: 180px;
+        top: 200px;
         left: 30px;
     }
 
-    /* TEAM - 2 column CSS Grid */
+    /* TEAM - CSS Grid: image + text side by side per card */
     #team {
         padding: 40px;
     }
@@ -636,38 +673,67 @@ footer a:hover {
     .team-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0;
+        gap: 20px;
     }
 
-    /* Each team card: image on one side, text on other */
     .team-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
         margin-bottom: 0;
     }
 
-    .team-card:nth-child(odd) img {
+    /* John Doe - image left, text right */
+    .team-card:nth-child(1) img {
         grid-column: 1;
-        grid-row: 1 / 5;
+        grid-row: 1 / 4;
         height: 100%;
         object-fit: cover;
     }
 
-    .team-card:nth-child(even) img {
+    .team-card:nth-child(1) h3 {
         grid-column: 2;
-        grid-row: 1 / 5;
+        grid-row: 1;
+    }
+
+    .team-card:nth-child(1) p:first-of-type {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .team-card:nth-child(1) p:last-child {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    /* Bob Rite - text left, image right */
+    .team-card:nth-child(2) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-card:nth-child(2) img {
+        grid-column: 2;
+        grid-row: 1 / 4;
         height: 100%;
         object-fit: cover;
-        order: 2;
     }
 
-    .team-card:nth-child(even) h3,
-    .team-card:nth-child(even) strong,
-    .team-card:nth-child(even) p:last-child {
+    .team-card:nth-child(2) h3 {
         grid-column: 1;
+        grid-row: 1;
     }
 
-    /* CONTACT - 2 column flexbox */
+    .team-card:nth-child(2) p:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .team-card:nth-child(2) p:last-child {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* CONTACT - flexbox side by side */
     #contact {
         padding: 40px;
     }
@@ -684,16 +750,11 @@ footer a:hover {
 
     .info-block {
         flex: 1;
-    }
-
-    /* Hours table beside location on desktop */
-    .info-block {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    /* Make iframe full width of its container */
     .location iframe {
         width: 100%;
         height: 260px;
